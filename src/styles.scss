@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'mindesign-theme.scss';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900,400|Source+Sans+Pro:900|Ubuntu:700');
+
+// $dark-bg: #212121;
+$dark-bg: #3f4e61;
+// $dark-acc: #613f4e;
+// $dark-acc: #141727; this
+// $dark-acc: #900c3f;
+$dark-acc: #581845;
+$mid-bg: #6c7884;
+$lighter-bg: #91989e;
+$lighter-bg2: #8e9bad;
+$light-bg: #fefefe;
+
+$sideNavWidth: 150px;
+
+.light-theme {
+    @include angular-material-theme($light-theme);
+}
+
+.dark-theme {
+    @include angular-material-theme($dark-theme);
+}

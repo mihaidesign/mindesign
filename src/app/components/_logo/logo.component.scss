@@ -1,0 +1,48 @@
+@import 'src/styles.scss';
+
+$logoBorder: 3px;
+// $logoColor: #000;
+$logoColor: $dark-bg;
+$logoSize: 100%;
+$logoFontSize: 24px;
+
+.logo {
+    position: relative;
+    width: $logoSize;
+    height: $logoSize;
+    border-top: $logoBorder solid $logoColor;
+    border-left: $logoBorder solid $logoColor;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        height: $logoBorder;
+        background: $logoColor;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        width: $logoBorder;
+        height: 50%;
+        background: $logoColor;
+    }
+
+    .text-container {
+        padding: 12.5% 20%;
+    }
+    span {
+        font-size: $logoFontSize;
+        display: block;
+        letter-spacing: 5px;
+        line-height: 1.2;
+        font-family: 'Biko-black', sans-serif;
+        color: $logoColor;
+    }
+}

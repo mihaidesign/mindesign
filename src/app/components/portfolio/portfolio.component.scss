@@ -1,0 +1,24 @@
+
+.container-fluid {
+    // height: 100vh;
+    overflow-y: scroll;
+    // background-image: url('../../../assets/iPad_Tablet_pure_minimal.png');
+    // background-position-y: bottom;
+
+    text-align: center;
+    color: #212121;
+
+    .title{
+        color: #222;
+        // position: absolute;
+        // bottom: 150px;
+        // left: 50%;
+    }
+
+    .subtitle { 
+        color: #222;
+        // position: absolute;
+        // bottom: 120px;
+        // left: 50%;
+    }
+}

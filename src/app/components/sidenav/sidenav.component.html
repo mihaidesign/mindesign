@@ -1,0 +1,33 @@
+<aside class="sidenav shadow-sm" [ngClass]="{'open': isOpened}">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col">
+                <!-- <a routerLink="/" mat-button class="logo" color="accent-light" (click)="log(o)">
+                    <img src="assets/MIND_LOGO.png" alt="Logo" class="img-fluid">
+                </a> -->
+                <app-logo></app-logo>
+                <div class="nav-links">
+                    <mat-nav-list *ngFor="let link of links">
+                        <app-link [link]="link" (click)="select()"></app-link>
+                    </mat-nav-list>
+                </div> <!-- .nav-links -->
+            </div> <!-- .col -->
+        </div> <!-- .row.align-items-center -->
+    </div> <!-- .container-fluid -->
+</aside>
+
+
+<!-- <mat-sidenav-container >
+    <mat-sidenav #leftSide mode="side" opened class="text-center d-none d-sm-block">
+        
+        
+    </mat-sidenav> -->
+    <!-- <mat-sidenav #rightSide mode="side" opened position="end" class="text-center">
+        <a routerLink="/">Home</a>
+    </mat-sidenav> -->
+
+    <!-- Body -->
+    <!-- <main @fadeInAnimation> -->
+        <!-- <router-outlet></router-outlet> -->
+    <!-- </main> -->
+<!-- </mat-sidenav-container> -->

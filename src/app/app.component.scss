@@ -1,0 +1,104 @@
+@import "node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap-grid.scss";
+@import 'src/styles.scss';
+
+$burgerSize: 24px;
+$margin: 15px;
+$menuHeight: calc(#{$burgerSize} - (#{$burgerSize} / 4));
+$menuWidth: $burgerSize;
+
+.mobile-nav {
+    height: calc(#{$menuHeight} + (#{$margin} * 2));
+    width: 100%;
+    position: fixed;
+    -webkit-backdrop-filter: blur(10px);
+    .menu {
+        margin: $margin;
+        height: $menuHeight;
+        width: $menuWidth;
+        padding: 0;
+        border: 0;
+        
+        position: absolute;
+        z-index: 15;
+        left: 0;
+        top: 0;
+        background: none;
+    
+        &:hover { cursor: pointer; }
+        &:focus { outline: none; }
+    
+        &.open {
+    
+            .bar {
+                transition: 
+                    width .2s ease-in 0s,
+                    height .2s ease-out 0s,
+                    transform .2s ease-in 0s;
+                &:nth-of-type(1) {
+                    transform:  translateY(7px) rotateZ(45deg);
+                }
+    
+                &:nth-of-type(2) {
+                    transform: scaleX(0);
+                }
+                &:nth-of-type(3) {
+                    transform:  translateY(-7px) rotateZ(-45deg);
+                }
+            }
+        }
+    
+        .bar {
+            transition: 
+                width .2s ease-out 0s,
+                height .2s ease-out 0s,
+                transform .2s ease-out 0s;
+            // transform: translateX(0);
+            transform: translateY(0);
+            width: inherit;
+            height: $burgerSize / 6;
+            background-color: $dark-bg;
+    
+        }
+    }
+
+    .title {
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        margin: $margin;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: capitalize;
+    }
+}
+
+
+main {
+    width: 100vw;
+    position: absolute;
+    right: 0;
+    transition: 
+        width 0.3s linear 0s,
+        transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1) 0.1s;
+
+}
+
+.backdrop-blur {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) {
+    .backdrop-blur {
+        background-color: rgba(255, 255, 255, .5);
+        backdrop-filter: blur(1em);
+    }
+}
+
+
+@include media-breakpoint-up(md) {
+    main {
+        width: calc(100vw - #{$sideNavWidth});
+        transition: width 0.3s ease-in-out 0s;
+        // background: $dark-bg;
+        // padding-left: 15px;
+    }
+}

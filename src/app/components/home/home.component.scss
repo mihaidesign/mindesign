@@ -1,0 +1,7 @@
+@import "~compass-mixins";
+.container-fluid {
+    // background-color: rgb(63, 78, 97); // Old browsers
+    // @include filter-gradient(#3f4e61, #6c7886, horizontal); // IE6-9 fallback on horizontal gradient
+    // @include background-image(linear-gradient(to right top, rgba(63,78,97,1) 0%,rgba(237,237,237,1) 100%,rgba(108,120,134,1) 100%));
+    background: #fff;
+}

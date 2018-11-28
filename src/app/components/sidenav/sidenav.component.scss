@@ -1,0 +1,53 @@
+@import "node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap-grid.scss";
+@import 'src/styles.scss';
+
+.sidenav {
+    transform: translateX(-$sideNavWidth);
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    width: $sideNavWidth;
+    background-color: $light-bg;
+    z-index: 10;
+
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1) 0s;
+
+    &.open {
+        transform: translateX(0);
+        width: 100%;
+
+        .container-fluid {
+            .row {
+                .col {
+                    app-logo {
+                        margin: -50% auto 10%;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .container-fluid {
+        height: inherit;
+
+        .row {
+            height: inherit;
+
+            .col {
+            
+                app-logo {
+                    width: 80px;
+                    display: block;
+                    margin: -100% auto 50%;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .sidenav {
+        transform: translateX(0);
+    }
+}
