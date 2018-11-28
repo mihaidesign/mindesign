@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioItem } from 'src/app/_models/portfolio.item';
+import { PortfolioCategoryItem } from 'src/app/_models/portfolio.category.item';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,7 +8,7 @@ import { PortfolioItem } from 'src/app/_models/portfolio.item';
 })
 export class PortfolioComponent implements OnInit {
 
-  item: PortfolioItem = {
+  item: PortfolioCategoryItem = {
     title : 'Title',
     description : 'giig',
     url : '/',

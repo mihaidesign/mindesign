@@ -14,6 +14,9 @@ import { LinkComponent } from './components/sidenav/link/link.component';
 import { LogoComponent } from './components/_logo/logo.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PortfolioItemComponent } from './components/portfolio/portfolio-item/portfolio-item.component';
+import { PortfolioCategoriesComponent } from './components/portfolio/portfolio-categories/portfolio-categories.component';
+import { WebDesignComponent } from './components/portfolio/portfolio-categories/web-design/web-design.component';
+import { PortfolioCategoryItemComponent } from './components/portfolio/portfolio-categories/portfolio-category-item/portfolio-category-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { PortfolioItemComponent } from './components/portfolio/portfolio-item/po
     LinkComponent,
     LogoComponent,
     PortfolioComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    PortfolioCategoriesComponent,
+    WebDesignComponent,
+    PortfolioCategoryItemComponent
   ],
   imports: [
     BrowserModule,
